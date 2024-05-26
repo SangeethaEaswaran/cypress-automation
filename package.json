@@ -45,6 +45,7 @@
     "dayjs": "^1.11.11",
     "debug": "^4.3.4",
     "define-data-property": "^1.1.4",
+    "del": "^6.1.1",
     "delayed-stream": "^1.0.0",
     "ecc-jsbn": "^0.1.2",
     "emoji-regex": "^8.0.0",
@@ -169,7 +170,7 @@
     "eslint-plugin-cypress": "^3.2.0"
   },
   "scripts": {
-    "test": "npx cypress run ",
+    "cy:run": "npx cypress run",
     "cy:open": "cypress open",
     "cy:info": "npx cypress info"
   },
