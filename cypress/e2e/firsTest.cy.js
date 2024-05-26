@@ -1,5 +1,12 @@
 //<references types="Cypress">
+import  {navigateTo}  from "../support/page-objects/navigationPage.js"
 describe('Test suite', ()=>{
+    beforeEach('Before Each', ()=>{
+cy.log('Before each ')
+// cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+cy.visit('https://example.cypress.io/')
+    })
+
     it('Test case', ()=>{
         // cy.visit('https://testautomationpractice.blogspot.com/');
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -117,9 +124,21 @@ describe('Test suite', ()=>{
             // cy.get('@dropDown')
             cy.get('@dropDown').click()
             })
-    it.only('Table example', ()=>{
+
+    it('Table example', ()=>{
                 cy.visit('https://example.cypress.io/commands/traversal')
                 cy.get('.table.traversal-table td').as('t').first().should('contain', 1)
                 cy.get('t').last().should('contain', 2)
     })
+
+    it.only('Tool tip', ()=>{
+        // cy.visit('https://example.cypress.io/commands/actions')
+
+        navigateTo.actionsPage()
+        // cy.get('home-list').find('a').should('contain', 'Actions').click()
+        cy.get('.action-btn').click()
+        cy.get('[role="tooltip"]').should('contain', 'This popover shows up on click')
+    })
+    //popup , alert , modal 
+
 })

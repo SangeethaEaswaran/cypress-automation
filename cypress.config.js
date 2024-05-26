@@ -4,6 +4,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth:1920,
   defaultCommandTimeout: 6000,
+  retries: 2,
   e2e: {
     // baseUrl: 'https://testautomationpractice.blogspot.com/',
     baseUrl: 'https://example.cypress.io',

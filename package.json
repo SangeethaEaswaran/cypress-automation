@@ -170,7 +170,8 @@
   },
   "scripts": {
     "test": "npx cypress run ",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:info": "npx cypress info"
   },
   "author": "",
   "license": "ISC",
