@@ -18,8 +18,14 @@ describe('Fixture Tutorial',()=> {
         cy.get('#exampleFormControlSelect1').select(this.data.gender)
         cy.get('#inlineRadio1').check()
         cy.get('#inlineRadio3').should('be.disabled')
-        cy.get('input[type="date"]').type('1998-12-12')
+        cy.get('input[type="date"]').type(this.data.dob)
         cy.get('.btn-success').click()
+    })
 
+    it.only('Custom commands example', function(){
+        cy.get('.nav-link').contains('Shop').click()
+        this.data.productName.forEach(element => {
+            cy.selectProduct(element)
+        });
     })
 })

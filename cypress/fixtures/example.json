@@ -3,5 +3,6 @@
   "email": "hello@cypress.io",
   "password": "Fixtures",
   "gender":"Female",
-  "dob":"30/12/2002"
+  "dob":"2002-12-12",
+  "productName": ["iphone X", "Nokia Edge"]
 }
